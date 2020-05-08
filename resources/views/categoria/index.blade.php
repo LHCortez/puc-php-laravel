@@ -34,7 +34,9 @@
         @foreach($categorias as $categoria)
         <tr>
             <td>{{$categoria->id}}</td>
-            <td>{{$categoria->descricao}}</td>
+            <td></td>
+
+             <td><a href="{{ route('despesa.categoria',$categoria->id)}}">{{$categoria->descricao}}</a></td>
 
             <td><a href="{{ route('categoria.edit',$categoria->id)}}" class="btn btn-primary">Editar</a></td>
             <td>
